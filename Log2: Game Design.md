@@ -24,7 +24,7 @@ Game Elements
 - Platforms
 - Main Character (and skins)
 
-We are going to try and re-create the original Icy Tower aswell as include additions.
+We are going by the base of the original Icy Tower aswell as include additions.
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Icy-Tower/assets/91538845/d42b4147-1ac7-4fb4-9f5a-e59fd681b81b)
 
 

@@ -30,6 +30,6 @@ We are going to try and re-create the original Icy Tower aswell as include addit
 
 Assets
 - Music
-- Sound effects (jumping, combo, falling, floor milestone, highscore, content unlocked, ui-interaction, floor specific / environmental noises)
+- Sound effects (jumping, combo, falling, floor milestone, highscore, content unlocked, ui-interaction, floor specific / environmental noises, tower UI changes based on amount of traversed floors e.g every 100 floors)
 - 2D
 - Character Models for the skins

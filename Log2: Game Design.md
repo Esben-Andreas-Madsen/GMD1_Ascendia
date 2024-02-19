@@ -3,7 +3,7 @@
 ## Executive summary
 
 Our game concept is based on an existing game called Icy Tower, which is a 2D platformer about jumping upwards in a castle-like environment.
-The genres is something of a Casual Platformer and is targeted towards younger people. It could fit well under the Facebook games tab. Its purpose is to keep alive the simplicity and replayability that Flash games used to have.
+The genres is something of a Casual Platformer and is targeted towards younger people. It could fit well under the Facebook games tab (A version actually already exists there). Its purpose is to keep alive the simplicity and replayability that Flash games used to have.
 
 Gameplay
 - Traverse the Tower (get a good score)

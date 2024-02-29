@@ -23,6 +23,7 @@ Game Elements
 - The Tower (Level, consists of walls and platforms)
 - Platforms
 - Main Character (and skins)
+- Collectibles (this is a feature, which may not be implemented. Player model skins will be available either throughout higher scores returning some amount of currency to the player, which in return can be used in the "store" or in-game collectibles. These collectibles could help with adding risk vs. reward into the game. The player could risk their run / possible new highscore in return for a new player skin.
 
 We are going by the base of the original Icy Tower aswell as include additions.
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Icy-Tower/assets/91538845/d42b4147-1ac7-4fb4-9f5a-e59fd681b81b)

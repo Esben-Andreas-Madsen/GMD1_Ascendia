@@ -33,3 +33,9 @@ Assets
 - Sound effects (jumping, combo, falling, floor milestone, highscore, content unlocked, ui-interaction, floor specific / environmental noises, tower UI changes based on amount of traversed floors e.g every 100 floors)
 - 2D
 - Character Models for the skins
+
+Milestones
+- Movement & Game Arena (simplified version of the tower)
+- Player + Objects interacting (collision etc)
+- Platforms (stationary at first)
+- Visible Score (solely based on floors progressed / height of tower reached in first edition)

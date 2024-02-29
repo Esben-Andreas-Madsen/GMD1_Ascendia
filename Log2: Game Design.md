@@ -39,5 +39,5 @@ Milestones
 Early Milestones:
 - Movement & Game Arena (simplified version of the tower)
 - Player + Objects interacting (collision etc)
-- Platforms (stationary at first)
+- Platforms (stationary and hardcoded at first)
 - Visible Score (solely based on floors progressed / height of tower reached in first edition)

@@ -39,9 +39,9 @@ We are going by the base of the original Icy Tower aswell as include additions.
 - 2D
 - Character Models for the skins
 
-Milestones
+### Milestones
 
-### Early Milestones:
+#### Early Milestones:
 
 - Movement & Game Arena (simplified version of the tower)
 - Player + Objects interacting (collision etc)

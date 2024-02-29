@@ -5,7 +5,8 @@
 Our game concept is based on an existing game called Icy Tower, which is a 2D platformer about jumping upwards in a castle-like environment.
 The genres is something of a Casual Platformer and is targeted towards younger people. It could fit well under the Facebook games tab (A version actually already exists there). Its purpose is to keep alive the simplicity and replayability that Flash games used to have.
 
-Gameplay
+### Gameplay
+
 - Traverse the Tower (height ascension increases scores)
 - Combo-meter (Combo increases speed of Player and the overall score)
 - Platforms based on height / floor. Every 50th floor will have a platform that stretches from wall to wall and every 100th floor will changes the level design (colour of platforms & background)
@@ -39,9 +40,9 @@ We are going by the base of the original Icy Tower aswell as include additions.
 - 2D
 - Character Models for the skins
 
-### Milestones
+## Milestones
 
-#### Early Milestones:
+### Early Milestones:
 
 - Movement & Game Arena (simplified version of the tower)
 - Player + Objects interacting (collision etc)

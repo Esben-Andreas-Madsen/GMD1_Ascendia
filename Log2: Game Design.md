@@ -7,7 +7,7 @@ The genres is something of a Casual Platformer and is targeted towards younger p
 
 Gameplay
 - Traverse the Tower (get a good score)
-- Combo-meter
+- Combo-meter (Combo increases speed of Player and the overall score)
 - Platforms based on height / floor
 - Collectibles / Achievements / Unlockables
 - Floor-tracker UI (or on the platforms)

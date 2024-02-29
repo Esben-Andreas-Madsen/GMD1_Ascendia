@@ -35,6 +35,8 @@ Assets
 - Character Models for the skins
 
 Milestones
+
+Early Milestones:
 - Movement & Game Arena (simplified version of the tower)
 - Player + Objects interacting (collision etc)
 - Platforms (stationary at first)

@@ -18,6 +18,7 @@ Mechanics
 - Building momentum
 - Platforms falling
 - Building combo
+- Wall bouncing
 
 Game Elements
 - The Tower (Level, consists of walls and platforms)

@@ -290,7 +290,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 100}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.1
 --- !u!212 &164927656
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSpeed: 10
   maxSpeed: 20
-  acceleration: 5
+  acceleration: 2
   baseJumpingPower: 20
   rb: {fileID: 780699167}
   groundCheck: {fileID: 538364475}
@@ -1529,7 +1529,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 100}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.1
 --- !u!212 &2129902154
 SpriteRenderer:
   m_ObjectHideFlags: 0

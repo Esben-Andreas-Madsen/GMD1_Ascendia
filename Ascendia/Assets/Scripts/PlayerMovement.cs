@@ -1,39 +1,81 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //By Esben
-    private float horizontal;
-    private float speed = 15f;
-    private float jumpingPower = 60f;
-
+    //by Esben
+    //Movement for the Player
+    //Gradially builds up or down depending on movement input
+    //Jump height is based on player momentum
+    //Jumping is only possible when grounded
+    [SerializeField] private float baseSpeed = 10f;
+    [SerializeField] private float maxSpeed = 20f;
+    [SerializeField] private float acceleration = 20f;
+    [SerializeField] private float baseJumpingPower = 20f;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform groundChack;
+    [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
-    void Update()
-    {
-        horizontal = Input.GetAxisRaw("Horizontal");
+    private float horizontalInput;
+    private bool isJumping;
+    private bool isGrounded;
+    private float currentSpeed;
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+    private void Update()
+    {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        isJumping = Input.GetButtonDown("Jump");
+
+        if (isJumping && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            Jump();
         }
+    }
 
-        if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
+    private void FixedUpdate()
+    {
+        MovePlayer(horizontalInput);
+        CheckGrounded();
+        Accelerate();
+
+        Debug.Log("Speed is: " + currentSpeed); // Debug statement
+
+    }
+
+    private void MovePlayer(float horizontalInput)
+    {
+        rb.velocity = new Vector2(horizontalInput * currentSpeed, rb.velocity.y);
+    }
+
+    private void Jump()
+    {
+        float jumpingPower = baseJumpingPower + (currentSpeed / maxSpeed) * baseJumpingPower;
+        rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+    }
+
+    private void CheckGrounded()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void Accelerate()
+    {
+        if (Mathf.Abs(horizontalInput) > 0)
         {
-            rb.velocity = new Vector2 (rb.velocity.x, rb.velocity.y * 0.5f);
+            // Accelerate gradually up to the max speed
+            currentSpeed = Mathf.Clamp(currentSpeed + acceleration * Time.fixedDeltaTime, baseSpeed, maxSpeed);
+        }
+        else
+        {
+            // Decelerate gradually when not moving
+            if (currentSpeed > baseSpeed)
+            {
+                currentSpeed = Mathf.Clamp(currentSpeed - (acceleration * 4) * Time.fixedDeltaTime, baseSpeed, maxSpeed);
+            }
+            else
+            {
+                currentSpeed = baseSpeed;
+            }
         }
     }
-    void FixedUpdate()
-    {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-    }
 
-    private bool IsGrounded()
-    {
-        return Physics2D.OverlapCircle(groundChack.position, 0.2f, groundLayer);
-    }
 }

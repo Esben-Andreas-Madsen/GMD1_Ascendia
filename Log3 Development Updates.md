@@ -118,12 +118,18 @@ public class CameraFollow : MonoBehaviour
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/481ce523-6ba9-41f0-836c-0eefff94474a)
 
 ### Platform Colission
+Unity provides a 2D collision script but it doesn't take height for side-collision which we want.
+So we made our own solution instead. 
+Our script allows the player to pass through the platforms from sides and underneath whilst being able to land on top.
+It's done by having two colliders where one is a trigger. The picture below illustrates this:
+
+![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/182b98bd-1676-40c5-bddb-c1fdd0c27769)
+
+When entering the blue colider it disables the red one, and when exiting it re-enables it.
+It is implementing in the following way:
+
 
 ```
-using UnityEngine;
-
-public class PlatformController : MonoBehaviour
-{
     public Collider2D topCollider;
     public Collider2D bodyCollider;
 
@@ -144,7 +150,6 @@ public class PlatformController : MonoBehaviour
             topCollider.enabled = true;
         }
     }
-}
 ```
 
 ### Sprites

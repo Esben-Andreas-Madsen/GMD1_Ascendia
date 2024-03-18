@@ -5,9 +5,14 @@
 
 ### Player Movement
 
-```
-using UnityEngine;
+The movement for the player is essential for having a decent game, and it takes a lot of tweaking to hit the sweet spot.
+In out movement script we have taken considerations for the following:
+- input
+- acceleration / deacceleration
+- jumping
+- ground check
 
+```
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float baseSpeed = 10f;
@@ -87,12 +92,10 @@ public class PlayerMovement : MonoBehaviour
 
 ### Camera Movement
 
-```
-using UnityEngine;
+Our game progresses upwards which is why we created a script that follows only the y-axis of the player.
 
-public class CameraFollow : MonoBehaviour
-    //Follow the Players y-axis
-{
+
+```
     public Transform target; // Reference to the player's transform
 
     private void Update()
@@ -109,7 +112,6 @@ public class CameraFollow : MonoBehaviour
             transform.position = newPosition;
         }
     }
-}
 
 ```
 
@@ -153,6 +155,8 @@ It is implementing in the following way:
 ```
 
 ### Sprites
+
+Finding assets in the asset store would probably be a lot easier than creating your own but we wanted to give it a shot anyways. We create some sprites in Aseprite which is also capable of animating.
 
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/28a44246-aa17-47c6-aa5d-f78162e34ad8)
 

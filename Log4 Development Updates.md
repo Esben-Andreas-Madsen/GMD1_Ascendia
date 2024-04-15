@@ -9,6 +9,30 @@ We've implemented a platform manager which keeps track of platforms.
 It spawns the platforms with a set distance in front of the Player as they traverse upwards, while also deleting platforms below for better performance.
 This is done by keeping track of platforms in an array where once the array is full, each index y-position is checked and the lowest is destroyed. Very nice :)
 
+```
+    void RemoveLowestPlatform()
+    {
+        float lowestYPos = float.MaxValue;
+        int lowestPlatformIndex = -1;
+
+        // Find the lowest platform
+        for (int i = 0; i < maxPlatforms; i++)
+        {
+            if (platforms[i] != null && platforms[i].transform.position.y < lowestYPos)
+            {
+                lowestYPos = platforms[i].transform.position.y;
+                lowestPlatformIndex = i;
+            }
+        }
+
+        // Remove the lowest platform
+        if (lowestPlatformIndex != -1)
+        {
+            Destroy(platforms[lowestPlatformIndex]);
+            platforms[lowestPlatformIndex] = null;
+        }
+    }
+```
 
 ## More Sprites
 

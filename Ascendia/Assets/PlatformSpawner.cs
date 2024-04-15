@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class PlatformSpawner : MonoBehaviour
 {
+    //Platform spawner script by Esben
+    //Keeps track of game platform prefab objects
     public GameObject platformPrefab;
-    public float distanceBetweenPlatforms = 5f; // Adjust this to change the distance between platforms
-    public int maxPlatforms = 20; // Maximum number of platforms to keep active at once
+    public float distanceBetweenPlatforms = 5f; 
+    public int maxPlatforms = 20; 
     public Transform player;
-    public float spawnAheadDistance = 20f; // Distance ahead of the player to spawn platforms
-    public int maxInitialSpawnAttempts = 100; // Maximum attempts to spawn initial platforms
+    public float spawnAheadDistance = 20f; 
+    public int maxInitialSpawnAttempts = 100; // Ran into some infinite loop where my ram kept growing. This helped >_>
 
     private GameObject[] platforms;
     private float lastSpawnPosition;
@@ -40,9 +42,8 @@ public class PlatformSpawner : MonoBehaviour
 
     void SpawnPlatform()
     {
-        float yPos = lastSpawnPosition + distanceBetweenPlatforms; // Spawn above the last platform
+        float yPos = lastSpawnPosition + distanceBetweenPlatforms; 
 
-        // Check if the total number of platforms exceeds the maximum limit
         if (GetActivePlatformCount() >= maxPlatforms)
         {
             RemoveLowestPlatform();
@@ -85,7 +86,7 @@ public class PlatformSpawner : MonoBehaviour
                 return i;
             }
         }
-        // If no inactive platform is found, return the index of the oldest platform
+        //Fallback if for some reason no spots were available
         return Random.Range(0, maxPlatforms);
     }
 

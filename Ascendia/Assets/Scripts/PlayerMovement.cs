@@ -37,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
         CheckGrounded();
         Accelerate();
 
-        Debug.Log("Speed is: " + currentSpeed); // Debug statement
 
     }
 

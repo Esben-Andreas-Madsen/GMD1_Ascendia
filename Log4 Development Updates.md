@@ -10,3 +10,8 @@ It spawns the platforms with a set distance in front of the Player as they trave
 This is done by keeping track of platforms in an array where once the array is full, each index y-position is checked and the lowest is destroyed. Very nice :)
 
 
+## More Sprites
+
+Another sprite for jumping.
+
+![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/ffa325e1-fe91-4edc-9bb9-5587cd39232e)

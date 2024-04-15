@@ -17,7 +17,6 @@ public class WallBounce : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision detected with: " + collision.gameObject.name); // Debug statement
 
         // Check if the collision is with a wall
         if (collision.gameObject.CompareTag("Wall"))

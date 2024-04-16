@@ -1,5 +1,35 @@
 # Log 4: Development Update
 
+## Main menu
+
+There is now a basic main menu present in the game. This offers a play button functionality as well as an instructions guide, which displays the controls of the game. Pressing the play button boots up the game but there is currently no way of returning to the menu without exiting the game.
+The controls are displayed solely with keyboard mapping for now and has sprites in conjunction with the text.
+
+There are now also a settings options present in the menu. Currently it has the ability to control the volume of the music or disable it entirely altogether depending on preferences.
+There are plans in the next update to add sound effects to the game (besides the main theme) and add options similar to the ones for the main theme.
+
+## Music
+
+As mentioned briefly in the above segment there is now music in the game. It is a main theme which persists through the menu and into the game. The music will start over from scratch if the player disables and then enables the music again at a later point in the settings menu. The music also loops/repeats itself as soon as it is finished so the player can keep enjoying the tune. The following script is how the music persists between the switching of main menu to the game:
+
+```
+public static MusicPersist instance;
+
+    void Awake()
+    {
+        if (instance != null)
+        Destroy(gameObject);
+
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+       
+
+    }
+```
+
 ## Platform Manager
 
 We've implemented a platform manager which keeps track of platforms.
@@ -35,6 +65,8 @@ This is done by keeping track of platforms in an array where once the array is f
 ```
 
 ## More Sprites
+
+Several custom made sprites have been added for the purpose of both gameplay and to display controls of the game in the menu.
 
 Another sprite for jumping.
 

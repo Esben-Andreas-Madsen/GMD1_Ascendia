@@ -8,6 +8,14 @@ The controls are displayed solely with keyboard mapping for now and has sprites 
 There are now also a settings options present in the menu. Currently it has the ability to control the volume of the music or disable it entirely altogether depending on preferences.
 There are plans in the next update to add sound effects to the game (besides the main theme) and add options similar to the ones for the main theme.
 
+Here is an image of the current menu:
+![image](image.png)
+
+The menu at the moment is focused on functionality over looks, but will be expanded upon to be more aesthetic as soon as the functionality is in place.
+
+### Highscores & Store
+(These menu features will be added in a future update)
+
 ## Music
 
 As mentioned briefly in the above segment there is now music in the game. It is a main theme which persists through the menu and into the game. The music will start over from scratch if the player disables and then enables the music again at a later point in the settings menu. The music also loops/repeats itself as soon as it is finished so the player can keep enjoying the tune. The following script is how the music persists between the switching of main menu to the game:

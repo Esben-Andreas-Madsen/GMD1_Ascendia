@@ -8,11 +8,12 @@ public class PlatformSpawner : MonoBehaviour
     public Transform player;
     public float spawnAheadDistance = 20f;
     public int maxInitialSpawnAttempts = 100;
-    public float minPlatformLength = 1f; // Minimum length of a platform
-    public float maxPlatformLength = 5f; // Maximum length of a platform
+    public float minPlatformLength = 1f;
+    public float maxPlatformLength = 5f; 
 
     private GameObject[] platforms;
     private float lastSpawnPosition;
+    private int platformCount = 0; 
 
     void Start()
     {
@@ -49,11 +50,14 @@ public class PlatformSpawner : MonoBehaviour
         }
 
         float length = Random.Range(minPlatformLength, maxPlatformLength);
-
-        // Random x position
         float xPos = Random.Range(-8f, 8f);
-
         GameObject platform = Instantiate(platformPrefab, new Vector3(xPos, yPos, 0f), Quaternion.identity);
+
+        if (++platformCount % 100 == 0)
+        {
+            length = 4f;
+        }
+
         platform.transform.localScale = new Vector3(length, platform.transform.localScale.y, platform.transform.localScale.z);
 
         platforms[GetNextPlatformIndex()] = platform;

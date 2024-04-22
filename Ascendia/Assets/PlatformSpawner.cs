@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class PlatformSpawner : MonoBehaviour
 {
-    //Platform spawner script by Esben
-    //Keeps track of game platform prefab objects
     public GameObject platformPrefab;
-    public float distanceBetweenPlatforms = 5f; 
-    public int maxPlatforms = 20; 
+    public float distanceBetweenPlatforms = 5f;
+    public int maxPlatforms = 20;
     public Transform player;
-    public float spawnAheadDistance = 20f; 
-    public int maxInitialSpawnAttempts = 100; // Ran into some infinite loop where my ram kept growing. This helped >_>
+    public float spawnAheadDistance = 20f;
+    public int maxInitialSpawnAttempts = 100;
+    public float minPlatformLength = 1f; // Minimum length of a platform
+    public float maxPlatformLength = 5f; // Maximum length of a platform
 
     private GameObject[] platforms;
     private float lastSpawnPosition;
@@ -23,7 +23,6 @@ public class PlatformSpawner : MonoBehaviour
 
     void Update()
     {
-        // Check if the player has moved beyond the last spawned position, then spawn platforms ahead
         if (player.position.y + spawnAheadDistance > lastSpawnPosition)
         {
             SpawnPlatform();
@@ -42,14 +41,21 @@ public class PlatformSpawner : MonoBehaviour
 
     void SpawnPlatform()
     {
-        float yPos = lastSpawnPosition + distanceBetweenPlatforms; 
+        float yPos = lastSpawnPosition + distanceBetweenPlatforms;
 
         if (GetActivePlatformCount() >= maxPlatforms)
         {
             RemoveLowestPlatform();
         }
 
-        GameObject platform = Instantiate(platformPrefab, new Vector3(Random.Range(-8f, 8f), yPos, 0f), Quaternion.identity);
+        float length = Random.Range(minPlatformLength, maxPlatformLength);
+
+        // Random x position
+        float xPos = Random.Range(-8f, 8f);
+
+        GameObject platform = Instantiate(platformPrefab, new Vector3(xPos, yPos, 0f), Quaternion.identity);
+        platform.transform.localScale = new Vector3(length, platform.transform.localScale.y, platform.transform.localScale.z);
+
         platforms[GetNextPlatformIndex()] = platform;
         lastSpawnPosition = yPos;
     }
@@ -59,7 +65,6 @@ public class PlatformSpawner : MonoBehaviour
         float lowestYPos = float.MaxValue;
         int lowestPlatformIndex = -1;
 
-        // Find the lowest platform
         for (int i = 0; i < maxPlatforms; i++)
         {
             if (platforms[i] != null && platforms[i].transform.position.y < lowestYPos)
@@ -69,7 +74,6 @@ public class PlatformSpawner : MonoBehaviour
             }
         }
 
-        // Remove the lowest platform
         if (lowestPlatformIndex != -1)
         {
             Destroy(platforms[lowestPlatformIndex]);
@@ -86,7 +90,6 @@ public class PlatformSpawner : MonoBehaviour
                 return i;
             }
         }
-        //Fallback if for some reason no spots were available
         return Random.Range(0, maxPlatforms);
     }
 

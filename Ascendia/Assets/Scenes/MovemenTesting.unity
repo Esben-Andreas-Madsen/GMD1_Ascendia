@@ -219,7 +219,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 6.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -667,8 +667,8 @@ MonoBehaviour:
   player: {fileID: 780699169}
   spawnAheadDistance: 10
   maxInitialSpawnAttempts: 100
-  minPlatformLength: 0.5
-  maxPlatformLength: 2
+  minPlatformLength: 0.3
+  maxPlatformLength: 1.2
 --- !u!1 &1332414950
 GameObject:
   m_ObjectHideFlags: 0

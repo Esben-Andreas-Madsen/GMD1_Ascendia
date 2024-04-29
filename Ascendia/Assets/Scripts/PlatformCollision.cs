@@ -8,6 +8,7 @@ public class PlatformController : MonoBehaviour
     public Collider2D topCollider;
     public Collider2D bodyCollider;
 
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -15,6 +16,7 @@ public class PlatformController : MonoBehaviour
             // Disable the top collider when the player enters the body collider
             topCollider.enabled = false;
         }
+       
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -24,5 +26,6 @@ public class PlatformController : MonoBehaviour
             // Enable the top collider when the player leaves the body collider
             topCollider.enabled = true;
         }
+  
     }
 }

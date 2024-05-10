@@ -28,7 +28,7 @@ public class FloorTracking : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Platform"))
+        if (other.CompareTag("Platform") && other.GetType() == typeof(BoxCollider2D))
         {
             isInCollider = true;
         }
@@ -36,7 +36,7 @@ public class FloorTracking : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Platform"))
+        if (other.CompareTag("Platform") && other.GetType() == typeof(BoxCollider2D))
         {
             isInCollider = false;
         }

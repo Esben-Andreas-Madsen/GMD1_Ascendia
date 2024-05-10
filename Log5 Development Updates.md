@@ -26,6 +26,25 @@ The background now proceedually spawns as the player moves upwards aswell and de
 
 With the sprite from last blog post the player now changes sprite based on whether they're touching the ground or not.
 
+```
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
+    public Sprite groundedSprite;
+    public Sprite jumpingSprite; 
+
+```
+```
+        if (isGrounded)
+        {
+            spriteRenderer.sprite = groundedSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = jumpingSprite;
+        }
+```
+
+
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/e706c521-da74-47b8-b721-bcf8d247abeb)
 
 

@@ -49,8 +49,7 @@ public class FloorTracking : MonoBehaviour
             float playerHeightIncrease = playerTransform.position.y - previousPlayerY;
             if (playerHeightIncrease >= minPlayerHeightIncrease)
             {
-                //currentFloor = playerTransform.position.y % 5f;
-                currentFloor++;
+                currentFloor += Mathf.FloorToInt(playerHeightIncrease / minPlayerHeightIncrease);
                 UnityEngine.Debug.LogError("Current floor: " + currentFloor);
                 previousPlayerY = playerTransform.position.y;
             }

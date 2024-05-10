@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontalInput;
     private bool isJumping;
-    private bool isGrounded;
+    public bool isGrounded;
     private float currentSpeed;
 
     private void Update()

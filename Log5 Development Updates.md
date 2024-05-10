@@ -51,6 +51,8 @@ With the sprite from last blog post the player now changes sprite based on wheth
 
 The game is now able to track how many floors the player have progressed upwards. 
 For now it is only displayed in the console as there are still some minor tweaks needed in order for it to have the desired effect. It currently counts up based on the interaction with the box collider on the platforms, however there are still some bugs due to the functionality of the script.
+![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/102215807/98e6d141-a6bd-4796-8e8f-89b3f5fefe29)
+
 - If the player goes through the bottom of the box collider it will count as +2 floors instead of 1.
 - If the player falls down an x-amount of floors the floor counter will not decrease.
 - The UI isn't currently being shown to the player since it isn't following the camera correctly.

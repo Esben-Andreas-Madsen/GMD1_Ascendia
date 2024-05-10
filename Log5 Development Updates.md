@@ -18,6 +18,8 @@ The background now proceedually spawns as the player moves upwards aswell and de
     }
 ```
 
+We might have to scale these up or look into preserving pixel art quality since they look blurry in-game. Something about pixels per unit might resolve it.
+
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/9baaf4f3-a425-4220-8061-90e167a77068)
 
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/26eb7eac-e8e0-47eb-9239-5717075d2b87)

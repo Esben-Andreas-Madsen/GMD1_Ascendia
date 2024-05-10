@@ -8,7 +8,7 @@ public class FloorTracking : MonoBehaviour
     private int currentFloor = 0;
     private Transform playerTransform;
     private float previousPlayerY;
-    private bool isInCollider = false;
+    private bool isInCollider = true;
 
     private const float minPlayerHeightIncrease = 5f;
 
@@ -28,7 +28,7 @@ public class FloorTracking : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Platform") && other.GetType() == typeof(BoxCollider2D))
+        if (other.CompareTag("Platform"))
         {
             isInCollider = true;
         }
@@ -36,7 +36,7 @@ public class FloorTracking : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Platform") && other.GetType() == typeof(BoxCollider2D))
+        if (other.CompareTag("Platform"))
         {
             isInCollider = false;
         }

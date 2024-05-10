@@ -48,3 +48,9 @@ We are going by the base of the original Icy Tower aswell as include additions.
 - Player + Objects interacting (collision etc)
 - Platforms (stationary and hardcoded at first)
 - Visible Score (solely based on floors progressed / height of tower reached in first edition)
+
+### Later Milestones
+
+- Some sort of enemy or danger encounter to improve difficulty. It could be lazers, birds or the like. If possible and fitting we could use some AI movements here.
+- Progressive theme changes. Certain platform levels could include specific encounters to that area. It can be indicated by changing the sprites.
+- Maybe a boss portal that takes the player to a different scene where they fight a boss that has random moves. Here we could include move indicators so that you can learn what's coming by playing repeatedly. We're thinking of a megaman-inspired type boss battle.

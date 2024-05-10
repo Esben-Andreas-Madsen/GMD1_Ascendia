@@ -8,6 +8,9 @@ public class FloorTracking : MonoBehaviour
     private int currentFloor = 0;
     private Transform playerTransform;
     private float previousPlayerY;
+    private bool isInCollider = false;
+
+    private const float minPlayerHeightIncrease = 5f;
 
     private void Start()
     {
@@ -25,41 +28,32 @@ public class FloorTracking : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        UnityEngine.Debug.LogError("Collision detected");
-        if (other.CompareTag("Platform") && playerTransform != null)
+        if (other.CompareTag("Platform"))
         {
-            // Check if the player has moved up by at least 5 units
-            float playerHeightIncrease = playerTransform.position.y - previousPlayerY;
-            UnityEngine.Debug.LogError("Player height increase: " + playerHeightIncrease);
-            UnityEngine.Debug.LogError("Current player Y: " + playerTransform.position.y);
-            UnityEngine.Debug.LogError("Previous player Y: " + previousPlayerY);
-            if (playerTransform.position.y - previousPlayerY >= 4f)
-            {
-                previousPlayerY = playerTransform.position.y;
-                currentFloor++;
-    
-                UnityEngine.Debug.LogError("Current floor: " + currentFloor);
+            isInCollider = true;
+        }
+    }
 
-            }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Platform"))
+        {
+            isInCollider = false;
         }
     }
 
     private void Update()
     {
-        if (playerTransform != null)
+        if (playerTransform != null && !isInCollider)
         {
-            previousPlayerY = playerTransform.position.y;
+            float playerHeightIncrease = playerTransform.position.y - previousPlayerY;
+            if (playerHeightIncrease >= minPlayerHeightIncrease)
+            {
+                //currentFloor = playerTransform.position.y % 5f;
+                currentFloor++;
+                UnityEngine.Debug.LogError("Current floor: " + currentFloor);
+                previousPlayerY = playerTransform.position.y;
+            }
         }
     }
 }
-
-
-/* private void OnTriggerExit2D(Collider2D other)
- {
-     if (other.CompareTag("Platform"))
-     {
-         currentFloor--;
-         UnityEngine.Debug.Log("Current floor: " + currentFloor);
-     }
- } */
-

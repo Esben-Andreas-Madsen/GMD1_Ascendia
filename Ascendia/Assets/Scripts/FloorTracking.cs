@@ -50,9 +50,9 @@ public class FloorTracking : MonoBehaviour
             if (playerHeightIncrease >= minPlayerHeightIncrease)
             {
                 currentFloor += Mathf.FloorToInt(playerHeightIncrease / minPlayerHeightIncrease);
-                UnityEngine.Debug.LogError("Current floor: " + currentFloor);
+                UnityEngine.Debug.Log("Current floor: " + currentFloor);
                 previousPlayerY = playerTransform.position.y;
             }
         }
     }
-}
+} 

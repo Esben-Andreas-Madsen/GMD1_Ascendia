@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     //Gradially builds up or down depending on movement input
     //Jump height is based on player momentum
     //Jumping is only possible when grounded
+    //Sprite changes depending on ´wether gounded
     [SerializeField] private float baseSpeed = 10f;
     [SerializeField] private float maxSpeed = 20f;
     [SerializeField] private float acceleration = 20f;
@@ -14,6 +15,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
+    public Sprite groundedSprite;
+    public Sprite jumpingSprite; 
 
     private float horizontalInput;
     private bool isJumping;
@@ -29,6 +34,15 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
+
+        if (isGrounded)
+        {
+            spriteRenderer.sprite = groundedSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = jumpingSprite;
+        }
     }
 
     private void FixedUpdate()
@@ -36,8 +50,6 @@ public class PlayerMovement : MonoBehaviour
         MovePlayer(horizontalInput);
         CheckGrounded();
         Accelerate();
-
-
     }
 
     private void MovePlayer(float horizontalInput)

@@ -48,6 +48,9 @@ We are going by the base of the original Icy Tower aswell as include additions.
 - Player + Objects interacting (collision etc)
 - Platforms (stationary and hardcoded at first)
 - Visible Score (solely based on floors progressed / height of tower reached in first edition)
+- Respawn / death mechanic
+- Pause game menu
+- Highscore menu
 
 ### Later Milestones
 

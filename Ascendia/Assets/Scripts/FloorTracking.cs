@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
+/*
+
 public class FloorTracking : MonoBehaviour
 {
     private int currentFloor = 0;
@@ -39,10 +41,9 @@ public class FloorTracking : MonoBehaviour
             }
         }
     }
-}
+} */
 
 
-/* using UnityEngine;
 
 public class FloorTracking : MonoBehaviour
 {
@@ -96,4 +97,4 @@ public class FloorTracking : MonoBehaviour
             }
         }
     }
-} */
+}

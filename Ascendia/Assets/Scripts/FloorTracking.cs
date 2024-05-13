@@ -2,60 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
-
-/*
-
-public class FloorTracking : MonoBehaviour
-{
-    private int currentFloor = 0;
-    private Rigidbody2D playerRigidbody;
-    private float previousPlayerY;
-
-    private const float minPlayerHeightIncrease = 5f;
-    private const float stationaryThreshold = 0.5f; // Threshhold for stationary trigger speed
-
-    private void Start()
-    {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-        {
-            playerRigidbody = player.GetComponent<Rigidbody2D>();
-            previousPlayerY = player.transform.position.y;
-        }
-        else
-        {
-            UnityEngine.Debug.LogError("Player object not found.");
-        }
-    }
-
-    private void Update()
-    {
-        if (playerRigidbody != null && Mathf.Abs(playerRigidbody.velocity.y) < stationaryThreshold)
-        {
-            float playerHeightIncrease = playerRigidbody.position.y - previousPlayerY;
-            if (playerHeightIncrease >= minPlayerHeightIncrease)
-            {
-                currentFloor++;
-                UnityEngine.Debug.Log("Current floor: " + currentFloor);
-                previousPlayerY = playerRigidbody.position.y;
-            }
-        }
-    }
-} */
-
-
+using TMPro;
 
 public class FloorTracking : MonoBehaviour
+    //by Both
+    //Floor counter
+    //Quite scuffed we wanna avoid finding by tag
+    //The textmesh kept giving nullpointers
 {
     private int currentFloor = 0;
     private Transform playerTransform;
     private float previousPlayerY;
     private bool isInCollider = true;
-
     private const float minPlayerHeightIncrease = 5f;
+
+    public TextMeshProUGUI floorText;
 
     private void Start()
     {
+        GameObject textMeshProObject = GameObject.FindGameObjectWithTag("FloorCounter");
+        if (textMeshProObject != null)
+        {
+            floorText = textMeshProObject.GetComponent<TextMeshProUGUI>();
+            floorText.text = "Floor: 0";
+        }
+        else
+        {
+            UnityEngine.Debug.LogError("TextMeshPro object not found.");
+        }
+
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
@@ -67,6 +42,7 @@ public class FloorTracking : MonoBehaviour
             UnityEngine.Debug.LogError("Player object not found.");
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -94,7 +70,11 @@ public class FloorTracking : MonoBehaviour
                 currentFloor += Mathf.FloorToInt(playerHeightIncrease / minPlayerHeightIncrease);
                 UnityEngine.Debug.Log("Current floor: " + currentFloor);
                 previousPlayerY = playerTransform.position.y;
+
+                floorText.text = "Floor: " + currentFloor.ToString();
             }
         }
     }
-} 
+}
+
+

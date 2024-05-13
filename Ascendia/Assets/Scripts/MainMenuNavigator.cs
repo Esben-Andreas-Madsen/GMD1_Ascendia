@@ -34,8 +34,6 @@ public class MainMenuNavigator : MonoBehaviour
 
         // select correct object
         EventSystem.current.SetSelectedGameObject(settingsMenuFirstButton);
-
-
     }
 
     public void CloseSettings()

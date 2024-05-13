@@ -29,10 +29,23 @@ public class MainMenuNavigator : MonoBehaviour
     {
         settingsMenu.SetActive(true);
 
+        // clear objects to ensure no issues
         EventSystem.current.SetSelectedGameObject(null);
 
+        // select correct object
         EventSystem.current.SetSelectedGameObject(settingsMenuFirstButton);
 
 
+    }
+
+    public void CloseSettings()
+    {
+        settingsMenu.SetActive(false);
+
+        // clear objects to ensure no issues
+        EventSystem.current.SetSelectedGameObject(null);
+
+        // select correct object
+        EventSystem.current.SetSelectedGameObject(settingsClosedButton);
     }
 }

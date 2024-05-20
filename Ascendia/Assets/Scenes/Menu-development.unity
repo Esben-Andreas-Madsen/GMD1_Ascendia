@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452d0d644bcc08e4dadcd427bcbdd7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: MovemenTesting
+  sceneName: MainGame
 --- !u!4 &376955577
 Transform:
   m_ObjectHideFlags: 0

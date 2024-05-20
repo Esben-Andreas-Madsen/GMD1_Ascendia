@@ -12,9 +12,8 @@ public class GameStopper2D : MonoBehaviour
     private void Start()
     {
         playerRigidbody2D = player.GetComponent<Rigidbody2D>();
-        highestYPosition = transform.position.y; // Initialize the highest Y position
+        highestYPosition = transform.position.y;
 
-        // Set the initial position of the GameStopper below the player
         transform.position = player.position - new Vector3(0f, startingDistance, 0f);
     }
 
@@ -25,7 +24,6 @@ public class GameStopper2D : MonoBehaviour
             float newYPosition = player.position.y - startingDistance;
             transform.position = new Vector3(transform.position.x, Mathf.Max(newYPosition, highestYPosition), transform.position.z);
 
-            // Update the highest Y position if the GameStopper ascends further
             highestYPosition = Mathf.Max(transform.position.y, highestYPosition);
         }
     }
@@ -36,7 +34,6 @@ public class GameStopper2D : MonoBehaviour
         {
             Debug.Log("Player touched the collider. Stopping the game.");
             Time.timeScale = 0;
-            // Show the respawn menu
             respawnMenu.ShowRespawnMenu();
         }
     }

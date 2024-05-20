@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu-development.unity
     guid: c204e1eae8beb0e4499331e348b3c499
   - enabled: 1
-    path: Assets/Scenes/MovemenTesting.unity
+    path: Assets/Scenes/MainGame.unity
     guid: ed28c81a4defc8e46b0ab383a73052e7
   m_configObjects: {}

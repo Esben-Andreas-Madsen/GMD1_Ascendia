@@ -1,9 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-//Pair programming
-//AI that handles obstacle
-//Rotates
 public class MovingObstacle2D : MonoBehaviour
 {
     public float moveSpeed = 2f;
@@ -28,6 +25,8 @@ public class MovingObstacle2D : MonoBehaviour
 
     private void Move()
     {
+        movement.y = Mathf.Min(0f, movement.y);
+
         Vector2 newPosition = rb.position + movement * moveSpeed * Time.fixedDeltaTime;
         rb.MovePosition(newPosition);
     }

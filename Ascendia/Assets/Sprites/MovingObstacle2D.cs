@@ -1,12 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
+//Pair programming
+//AI that handles obstacle
+//Rotates
 public class MovingObstacle2D : MonoBehaviour
 {
     public float moveSpeed = 2f;
-    public float minChangeTime = 1f;
-    public float maxChangeTime = 3f;
-    public float playerDetectionRange = 5f;
+    public float rotationSpeed = 100f;
     private Rigidbody2D rb;
     private Vector2 movement;
     private GameObject player;
@@ -22,6 +23,7 @@ public class MovingObstacle2D : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        Rotate();
     }
 
     private void Move()
@@ -30,39 +32,29 @@ public class MovingObstacle2D : MonoBehaviour
         rb.MovePosition(newPosition);
     }
 
+    private void Rotate()
+    {
+        if (movement != Vector2.zero)
+        {
+            float targetAngle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+            float currentAngle = Mathf.Atan2(rb.transform.up.y, rb.transform.up.x) * Mathf.Rad2Deg;
+            float angleDifference = Mathf.DeltaAngle(currentAngle, targetAngle);
+
+            float rotationAmount = Mathf.Sign(angleDifference) * Mathf.Min(rotationSpeed * Time.fixedDeltaTime, Mathf.Abs(angleDifference));
+            rb.MoveRotation(rb.rotation + rotationAmount);
+        }
+    }
+
     private IEnumerator ChangeDirection()
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(minChangeTime, maxChangeTime));
             if (player != null)
             {
-                float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-                if (distanceToPlayer <= playerDetectionRange)
-                {
-                    Vector2 directionToPlayer = (player.transform.position - transform.position).normalized;
-                    movement = new Vector2(directionToPlayer.x, 0);
-                }
-                else
-                {
-                    float randomDirection = Random.Range(-1f, 1f);
-                    movement = new Vector2(randomDirection, 0).normalized;
-                }
+                Vector2 directionToPlayer = (player.transform.position - transform.position).normalized;
+                movement = directionToPlayer;
             }
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            // Handle obstruction logic (e.g., reduce player health, bounce player, etc.)
-        }
-
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            // Reverse direction on hitting a wall
-            movement = -movement;
+            yield return new WaitForSeconds(Random.Range(0.25f, 1f));
         }
     }
 }

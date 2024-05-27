@@ -2557,6 +2557,10 @@ PrefabInstance:
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1199301950558947502, guid: a53af9e62685c534c90c6d7dbb389c3a, type: 3}
+      propertyPath: rotationSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199301950558947502, guid: a53af9e62685c534c90c6d7dbb389c3a, type: 3}
       propertyPath: playerDetectionRange
       value: 20
       objectReference: {fileID: 0}

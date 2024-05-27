@@ -1226,7 +1226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 10
-  maxSpeed: 20
+  maxSpeed: 15
   acceleration: 2
   baseJumpingPower: 20
   rb: {fileID: 780699167}

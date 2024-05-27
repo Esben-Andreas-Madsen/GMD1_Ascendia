@@ -8,7 +8,7 @@ TagManager:
   - Platform
   - FloorCounter
   - DeathZone
-  - Obstacle
+  - HighscoreCounter
   layers:
   - Default
   - TransparentFX

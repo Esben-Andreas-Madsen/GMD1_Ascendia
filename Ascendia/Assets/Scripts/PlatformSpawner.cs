@@ -51,14 +51,14 @@ public class PlatformSpawner : MonoBehaviour
 
         float length = Random.Range(minPlatformLength, maxPlatformLength);
         float xPos = Random.Range(-8f, 8f);
-        GameObject platform = Instantiate(platformPrefab, new Vector2(xPos, yPos), Quaternion.identity);
+        GameObject platform = Instantiate(platformPrefab, new Vector3(xPos, yPos, 0f), Quaternion.identity);
 
         if (++platformCount % 100 == 0)
         {
-            length = 6f;
+            length = 4f;
         }
 
-        platform.transform.localScale = new Vector2(length, platform.transform.localScale.y);
+        platform.transform.localScale = new Vector3(length, platform.transform.localScale.y, platform.transform.localScale.z);
 
         platforms[GetNextPlatformIndex()] = platform;
         lastSpawnPosition = yPos;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using TMPro;
+using UnityEngine.TextCore.Text;
 
 public class FloorTracking : MonoBehaviour
 //by Both
@@ -20,9 +21,11 @@ public class FloorTracking : MonoBehaviour
     public TextMeshProUGUI floorText;
     public TextMeshProUGUI highscoreText;
 
+
     private void Start()
     {
         GameObject textMeshProObject = GameObject.FindGameObjectWithTag("FloorCounter");
+
         if (textMeshProObject != null)
         {
             floorText = textMeshProObject.GetComponent<TextMeshProUGUI>();

@@ -92,6 +92,7 @@ public class FloorTracking : MonoBehaviour
                     highscore = currentFloor;
                     highscoreText.text = "Highscore: " + highscore.ToString();
                     PlayerPrefs.SetInt("Highscore", highscore);
+                    HighScoreManager.UpdateHighScores(highscore);
                     UnityEngine.Debug.Log("New highscore: " + highscore);
                 }
             }

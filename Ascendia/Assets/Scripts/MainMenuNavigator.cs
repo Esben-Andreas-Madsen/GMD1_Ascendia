@@ -6,9 +6,10 @@ using UnityEngine.EventSystems;
 public class MainMenuNavigator : MonoBehaviour
 {
 
-    public GameObject mainMenu, settingsMenu;
+    public GameObject mainMenu, settingsMenu, highScoreMenu;
 
-    public GameObject mainMenuFirstButton, settingsMenuFirstButton, settingsClosedButton;
+
+    public GameObject mainMenuFirstButton, settingsMenuFirstButton, settingsClosedButton, highScoreButton, highScoreClosedButton;
 
 
 
@@ -45,5 +46,27 @@ public class MainMenuNavigator : MonoBehaviour
 
         // select correct object
         EventSystem.current.SetSelectedGameObject(settingsClosedButton);
+    }
+
+    public void OpenHighscore()
+    {
+        highScoreMenu.SetActive(true);
+
+        // clear objects to ensure no issues
+        EventSystem.current.SetSelectedGameObject(null);
+
+        // select correct object
+        EventSystem.current.SetSelectedGameObject(highScoreButton);
+    }
+
+    public void CloseHighscore()
+    {
+        highScoreMenu.SetActive(false);
+
+        // clear objects to ensure no issues
+        EventSystem.current.SetSelectedGameObject(null);
+
+        // select correct object
+        EventSystem.current.SetSelectedGameObject(highScoreClosedButton);
     }
 }

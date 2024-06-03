@@ -120,7 +120,7 @@ Our game progresses upwards which is why we created a script that follows only t
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/481ce523-6ba9-41f0-836c-0eefff94474a)
 
 ### Platform Colission
-Unity provides a 2D collision script but it doesn't take height for side-collision which we want.
+Unity provides a 2D collision script but it doesn't allow for side-collision which we want.
 So we made our own solution instead. 
 Our script allows the player to pass through the platforms from sides and underneath whilst being able to land on top.
 It's done by having two colliders where one is a trigger. The picture below illustrates this:

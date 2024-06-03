@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
 
-public class GameStopper2D : MonoBehaviour
+public class GameStopper : MonoBehaviour
 {
     public Transform player;
     public float startingDistance = 80f;
@@ -8,6 +9,8 @@ public class GameStopper2D : MonoBehaviour
 
     private Rigidbody2D playerRigidbody2D;
     private float highestYPosition;
+
+    public event Action OnPlayerDeath;
 
     private void Start()
     {
@@ -35,6 +38,15 @@ public class GameStopper2D : MonoBehaviour
             Debug.Log("Player touched the collider. Stopping the game.");
             Time.timeScale = 0;
             respawnMenu.ShowRespawnMenu();
+
+            HandlePlayerDeath();
         }
+    }
+
+    public void HandlePlayerDeath()
+    {
+        // Trigger the death event
+        Debug.Log("Player has died");
+        OnPlayerDeath?.Invoke();
     }
 }

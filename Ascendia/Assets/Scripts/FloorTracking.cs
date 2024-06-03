@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class FloorTracking : MonoBehaviour
 //by Both
@@ -17,7 +18,10 @@ public class FloorTracking : MonoBehaviour
     private bool isInCollider = true;
     private const float minPlayerHeightIncrease = 5f;
 
-    public TextMeshProUGUI floorText;
+    [SerializeField] private GameObject stopper;
+
+
+   public TextMeshProUGUI floorText;
     public TextMeshProUGUI highscoreText;
 
     private void Start()
@@ -33,7 +37,7 @@ public class FloorTracking : MonoBehaviour
             UnityEngine.Debug.LogError("TextMeshPro object not found.");
         }
 
-        GameObject highscoreTextMeshProObject = GameObject.FindGameObjectWithTag("HighscoreCounter"); // Assuming you have a tag for the highscore
+        GameObject highscoreTextMeshProObject = GameObject.FindGameObjectWithTag("HighscoreCounter"); 
         if (highscoreTextMeshProObject != null)
         {
             highscoreText = highscoreTextMeshProObject.GetComponent<TextMeshProUGUI>();
@@ -91,11 +95,28 @@ public class FloorTracking : MonoBehaviour
                 {
                     highscore = currentFloor;
                     highscoreText.text = "Highscore: " + highscore.ToString();
-                    PlayerPrefs.SetInt("Highscore", highscore);
-                    HighScoreManager.UpdateHighScores(highscore);
                     UnityEngine.Debug.Log("New highscore: " + highscore);
                 }
             }
         }
+    }
+
+    private void OnEnable()
+    {
+
+        stopper.GetComponent<GameStopper>().OnPlayerDeath += HandlePlayerDeath;
+        
+    }
+
+    private void OnDisable()
+    {
+        stopper.GetComponent<GameStopper>().OnPlayerDeath -= HandlePlayerDeath;
+    }
+
+    private void HandlePlayerDeath()
+    {
+        PlayerPrefs.SetInt("Highscore", highscore);
+        HighScoreManager.UpdateHighScores(currentFloor);
+        UnityEngine.Debug.Log("Handled player death");
     }
 }

@@ -10,7 +10,7 @@
 - [Blog #5 - Development Update](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/blob/main/Log5%20Development%20Updates.md)
 - [Blog #6 - Final Update, Showcase and Conclusion]()
 
-## Third Party Sources
+## Third Party Sources, Assets and Tutorials
 
 - [Boulder image](https://www.deviantart.com/tdeleeuw/art/Boulder-pixel-art-427731885)
 - [Controller Menu Navigation](https://www.youtube.com/watch?v=SXBgBmUcTe0&ab_channel=gamesplusjames)

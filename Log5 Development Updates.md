@@ -49,7 +49,7 @@ With the sprite from last blog post the player now changes sprite based on wheth
 
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/e706c521-da74-47b8-b721-bcf8d247abeb)
 
-A bug we've noticed with this is that the player can stand on the edge of a platform and not be able to jump. While this bug is 'active' the player wil have the jumping sprite active. So for some reason you aren't grounded althrough you're standing on the platform. This is probably because of a misalligned collider.
+A bug we've noticed with this is that the player can stand on the edge of a platform and not be able to jump. While this bug is 'active' the player will have the jumping sprite active. So for some reason you aren't grounded althrough you're standing on the platform. This is probably because of a misalligned collider.
 
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/f76ea705-e69a-487e-9756-2e69ce08b1ca)
 

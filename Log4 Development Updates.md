@@ -9,7 +9,8 @@ There are now also a settings options present in the menu. Currently it has the 
 There are plans in the next update to add sound effects to the game (besides the main theme) and add options similar to the ones for the main theme.
 
 Here is an image of the current menu: <br>
-![image](image.png)
+![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/94fd3ddc-3cc2-47a5-bcca-0f7b4e5560c6)
+
 
 The menu at the moment is focused on functionality over looks, but will be expanded upon to be more aesthetic as soon as the functionality is in place.
 

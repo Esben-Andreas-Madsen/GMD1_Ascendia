@@ -31,6 +31,5 @@ public class RespawnMenu : MonoBehaviour
     {
         //todo: implement better
         Time.timeScale = 1;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu-development");
     }
 }

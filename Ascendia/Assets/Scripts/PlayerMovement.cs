@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -59,8 +60,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        PlayJumpSound();
         float jumpingPower = baseJumpingPower + (currentSpeed / maxSpeed) * baseJumpingPower;
         rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+    }
+
+    private void PlayJumpSound()
+    {
+        SoundManager.instance.PlaySound(2);
     }
 
     private void CheckGrounded()

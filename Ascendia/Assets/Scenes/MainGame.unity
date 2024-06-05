@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 780699169}
-  startingDistance: 50
+  startingDistance: 35
   respawnMenu: {fileID: 1879129828}
 --- !u!61 &675210344
 BoxCollider2D:

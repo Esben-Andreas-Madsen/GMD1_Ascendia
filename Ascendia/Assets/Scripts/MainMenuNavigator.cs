@@ -6,10 +6,10 @@ using UnityEngine.EventSystems;
 public class MainMenuNavigator : MonoBehaviour
 {
 
-    public GameObject mainMenu, settingsMenu, highScoreMenu;
+    public GameObject mainMenu, settingsMenu, highScoreMenu, instrucMenu;
 
 
-    public GameObject mainMenuFirstButton, settingsMenuFirstButton, settingsClosedButton, highScoreButton, highScoreClosedButton;
+    public GameObject mainMenuFirstButton, settingsMenuFirstButton, highScoreButton, instrucButton, menuCloseButton;
 
 
 
@@ -37,16 +37,6 @@ public class MainMenuNavigator : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(settingsMenuFirstButton);
     }
 
-    public void CloseSettings()
-    {
-        settingsMenu.SetActive(false);
-
-        // clear objects to ensure no issues
-        EventSystem.current.SetSelectedGameObject(null);
-
-        // select correct object
-        EventSystem.current.SetSelectedGameObject(settingsClosedButton);
-    }
 
     public void OpenHighscore()
     {
@@ -59,14 +49,28 @@ public class MainMenuNavigator : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(highScoreButton);
     }
 
-    public void CloseHighscore()
+
+    public void OpenInstructions()
     {
-        highScoreMenu.SetActive(false);
+        instrucMenu.SetActive(true);
 
         // clear objects to ensure no issues
         EventSystem.current.SetSelectedGameObject(null);
 
         // select correct object
-        EventSystem.current.SetSelectedGameObject(highScoreClosedButton);
+        EventSystem.current.SetSelectedGameObject(instrucButton);
+
     }
+
+    public void CloseCurrentMenu()
+    {
+        instrucMenu.SetActive(false);
+
+        // clear objects to ensure no issues
+        EventSystem.current.SetSelectedGameObject(null);
+
+        // select correct object
+        EventSystem.current.SetSelectedGameObject(menuCloseButton);
+    }
+
 }

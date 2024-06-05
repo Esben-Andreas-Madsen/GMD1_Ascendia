@@ -2,22 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicPersist : MonoBehaviour
+public class SoundManager : MonoBehaviour
 {
-    public static MusicPersist instance;
+    public static SoundManager instance;
 
     public AudioSource[] soundEffects;
+    private bool isMuted;
 
     void Awake()
     {
-        if (instance != null)
-        Destroy(gameObject);
-
-        else
+        if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameObject);
+            UnityEngine.Debug.Log("AudioManager instance created.");
         }
+        else
+        {
+            UnityEngine.Debug.Log("Destroying duplicate AudioManager instance.");
+            Destroy(gameObject);
+        }
+
     }
 
     public void PlaySound(int index)

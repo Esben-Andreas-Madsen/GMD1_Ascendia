@@ -39,8 +39,14 @@ public class GameStopper : MonoBehaviour
             Time.timeScale = 0;
             respawnMenu.ShowRespawnMenu();
 
+            PlayDeathSound();
             HandlePlayerDeath();
         }
+    }
+
+    private void PlayDeathSound()
+    {
+        SoundManager.instance.PlaySound(1);
     }
 
     public void HandlePlayerDeath()

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static System.Net.Mime.MediaTypeNames;
 
 public class MainMenuNavigator : MonoBehaviour
 {
@@ -71,6 +73,11 @@ public class MainMenuNavigator : MonoBehaviour
 
         // select correct object
         EventSystem.current.SetSelectedGameObject(menuCloseButton);
+    }
+
+    public void QuitGame()
+    {
+        UnityEngine.Application.Quit();
     }
 
 }

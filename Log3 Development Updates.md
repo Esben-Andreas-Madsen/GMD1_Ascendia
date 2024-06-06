@@ -156,7 +156,7 @@ It is implementing in the following way:
 
 ### Sprites
 
-Finding assets in the asset store would probably be a lot easier than creating your own but we wanted to give it a shot anyways. We create some sprites in Aseprite which is also capable of animating.
+Finding assets in the asset store would probably be a lot easier than creating your own but we wanted to give it a shot anyways. We create some sprites in Aseprite which is also capable of animating. There were also some sprites we created which resembled keyboard input for an instructions page, but opted out of using those since the main focus is playability on an arcade machine.
 
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/28a44246-aa17-47c6-aa5d-f78162e34ad8)
 

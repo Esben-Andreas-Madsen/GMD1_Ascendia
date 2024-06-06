@@ -123,6 +123,7 @@ Our game progresses upwards which is why we created a script that follows only t
 Unity provides a 2D collision script but it doesn't allow for side-collision which we want.
 So we made our own solution instead. 
 Our script allows the player to pass through the platforms from sides and underneath whilst being able to land on top.
+There could be some slight issues in the future due to the bottom collider being bigger than necessary, but it is also at the same time a way of handling the collision properly based on the trajectory of the player model.
 It's done by having two colliders where one is a trigger. The picture below illustrates this:
 
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/182b98bd-1676-40c5-bddb-c1fdd0c27769)

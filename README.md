@@ -14,7 +14,7 @@
 
 - [Boulder image](https://www.deviantart.com/tdeleeuw/art/Boulder-pixel-art-427731885)
 - [Controller Menu Navigation](https://www.youtube.com/watch?v=SXBgBmUcTe0&ab_channel=gamesplusjames)
-- [Change Scene](https://www.youtube.com/watch?v=YVATrLTZZTk)
+- [Change Scene Tutorial](https://www.youtube.com/watch?v=YVATrLTZZTk)
 
 ## WebGL Playable Link
 

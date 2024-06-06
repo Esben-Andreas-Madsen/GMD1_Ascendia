@@ -94,6 +94,10 @@ It is possible to jump through the platforms and spam the jump button and then i
 You can run into a wall and build momentum by doing so.  
 It's not gamebreaking but has yet to be fixed.  
 
+#### Button colour
+
+Some buttons have the wrong 'selected' colour. This should only be two buttons that show as green when selected instead of red.
+
 
 ## Conclusion 
 

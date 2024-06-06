@@ -12,7 +12,7 @@ After entering the game and quitting back to the menu the settings will be locke
  </br>
 
  
-* Platform safety
+* Platform safety </br>
 
 It was intended that every 100th platform should cover from wall to wall in order to create a safety net and also signify a change in the theme layout, however these platforms will appear sometimes ~10 ish platforms earlier and will only cover 80-90% of the actual game arena.
 

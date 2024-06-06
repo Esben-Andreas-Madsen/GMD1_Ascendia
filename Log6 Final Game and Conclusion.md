@@ -28,6 +28,10 @@ We did some detailing for the menus. They're now prettier and fit the theme bett
 
 If you die you can select respawn or exit to return to main menu.  
 
+#### Highscore Tracking
+
+There is now an ingame highscore counter for the top score and a menu showing off the top 8 best scores achieved.
+
 
 ## Known bugs/issues
 

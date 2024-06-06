@@ -24,6 +24,11 @@ You can now die more easily. The Death Zone is only the distance of rougly 5 pla
 We did some detailing for the menus. They're now prettier and fit the theme better.  
 
 
+#### Respawn Menu
+
+If you die you can select respawn or exit to return to main menu.  
+
+
 ## Known bugs/issues
 
 #### Jumping

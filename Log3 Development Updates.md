@@ -5,7 +5,7 @@
 
 ### Player Movement
 
-The movement for the player is essential for having a decent game, and it takes a lot of tweaking to hit the sweet spot.
+The movement for the player is essential for having a decent game, and it takes a lot of tweaking to hit the sweet spot.  
 In out movement script we have taken considerations for the following:
 - input
 - acceleration / deacceleration

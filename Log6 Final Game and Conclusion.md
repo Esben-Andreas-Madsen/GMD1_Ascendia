@@ -59,8 +59,6 @@ We did some detailing for the menus. They're now prettier and fit the theme bett
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/102215807/2d5abd50-de35-4af3-a45e-e03171d4491d)
 
 
-
-
 #### Respawn Menu
 
 If you die you can select respawn or exit to return to main menu.  
@@ -68,6 +66,8 @@ If you die you can select respawn or exit to return to main menu.
 #### Highscore Tracking
 
 There is now an ingame highscore counter for the top score and a menu showing off the top 8 best scores achieved.
+
+![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/72aa4338-cb5b-462b-97b5-9ca6de156d03)
 
 
 ## Known bugs/issues

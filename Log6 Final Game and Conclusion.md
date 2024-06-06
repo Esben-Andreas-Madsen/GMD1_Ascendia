@@ -21,8 +21,9 @@ You can now die more easily. The Death Zone is only the distance of rougly 5 pla
 
 #### Prettier Menus
 
-We did some detailing for the menus. They're now prettier and fit the theme better. We did originally want a custom made sprite as the menu background but opted out of it due to time constraints and focus on other areas. The text in the menu/game use our own custom made font.  ! 
-  [image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/102215807/1349011e-0398-415a-b873-cd3a15af6efb)
+We did some detailing for the menus. They're now prettier and fit the theme better. We did originally want a custom made sprite as the menu background but opted out of it due to time constraints and focus on other areas. The text in the menu/game use our own custom made font.   
+![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/102215807/2d5abd50-de35-4af3-a45e-e03171d4491d)
+
 
 
 

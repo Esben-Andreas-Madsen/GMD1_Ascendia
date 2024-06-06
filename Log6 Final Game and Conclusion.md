@@ -17,7 +17,7 @@ It has AI movements but to make it less annoying for the player it doesn't move 
  
 #### Difficulty Balance
 
-You can now die more easily. The Death Zone is only the distance of rougly 5 platforms below the Player. Before it was between 8-10 platforms, which felt a little to easy at times.
+You can now die more easily. The Death Zone is only the distance of rougly 5 platforms below the Player. Before it was between 8-10 platforms which felt a little to easy at times.
 
 #### Prettier Menus
 

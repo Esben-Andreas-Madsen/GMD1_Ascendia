@@ -56,10 +56,10 @@ public class MainMenuNavigator : MonoBehaviour
     {
         instrucMenu.SetActive(true);
 
-        // clear objects to ensure no issues
+        // clear objects
         EventSystem.current.SetSelectedGameObject(null);
 
-        // select correct object
+        // select object
         EventSystem.current.SetSelectedGameObject(instrucButton);
 
     }

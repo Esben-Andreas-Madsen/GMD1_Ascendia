@@ -12,7 +12,6 @@ public class PlatformController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Disable the top collider when the player enters the body collider
             topCollider.enabled = false;
         }
     }
@@ -21,7 +20,6 @@ public class PlatformController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Enable the top collider when the player leaves the body collider
             topCollider.enabled = true;
         }
     }

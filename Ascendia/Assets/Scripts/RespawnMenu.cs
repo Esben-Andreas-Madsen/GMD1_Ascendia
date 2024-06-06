@@ -29,7 +29,6 @@ public class RespawnMenu : MonoBehaviour
 
     public void ExitToMain()
     {
-        //todo: implement better
         Time.timeScale = 1;
     }
 }

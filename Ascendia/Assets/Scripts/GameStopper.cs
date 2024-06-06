@@ -51,7 +51,6 @@ public class GameStopper : MonoBehaviour
 
     public void HandlePlayerDeath()
     {
-        // Trigger the death event
         Debug.Log("Player has died");
         OnPlayerDeath?.Invoke();
     }

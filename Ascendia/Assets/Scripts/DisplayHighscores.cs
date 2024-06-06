@@ -5,7 +5,7 @@ using TMPro;
 
 public class DisplayHighscores : MonoBehaviour
 {
-    public TextMeshProUGUI[] highScoreTexts; // Assign these in the inspector
+    public TextMeshProUGUI[] highScoreTexts;
 
     private void Start()
     {

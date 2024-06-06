@@ -66,7 +66,6 @@ public class MainMenuNavigator : MonoBehaviour
 
     public void CloseCurrentMenu()
     {
-        instrucMenu.SetActive(false);
 
         // clear objects to ensure no issues
         EventSystem.current.SetSelectedGameObject(null);

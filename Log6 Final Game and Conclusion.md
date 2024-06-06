@@ -60,7 +60,7 @@ You can now die more easily. The Death Zone is only the distance of rougly 5 pla
 #### Prettier Menus
 
 We did some detailing for the menus. They're now prettier and fit the theme better. We did originally want a custom made sprite as the menu background but opted out of it due to time constraints and focus on other areas. The text in the menu/game use our own custom made font.   
-![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/102215807/2d5abd50-de35-4af3-a45e-e03171d4491d)
+<img src="https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/102215807/2d5abd50-de35-4af3-a45e-e03171d4491d" width="500">
 
 
 #### Respawn Menu
@@ -71,9 +71,7 @@ If you die you can select respawn or exit to return to main menu.
 
 There is now an ingame highscore counter for the top score and a menu showing off the top 8 best scores achieved.
 
-![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/72aa4338-cb5b-462b-97b5-9ca6de156d03)
-
-<img src="https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/72aa4338-cb5b-462b-97b5-9ca6de156d03" width="250">
+<img src="https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/72aa4338-cb5b-462b-97b5-9ca6de156d03" width="500">
 
 
 ## Known bugs/issues

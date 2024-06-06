@@ -14,6 +14,21 @@ The Game now has 3 sound effects that play whenever you:
 Occasionally the player will now stumble upon a boulder falling down.  
 It acts as an obstacle you have to avoid, but it can only block you from progressing up.  
 It has AI movements but to make it less annoying for the player it doesn't move a lot.  
+Here's a snippet of how it changes direction towards the player:
+```
+    private IEnumerator ChangeDirection()
+    {
+        while (true)
+        {
+            if (player != null)
+            {
+                Vector2 directionToPlayer = (player.transform.position - transform.position).normalized;
+                movement = directionToPlayer;
+            }
+            yield return new WaitForSeconds(Random.Range(0.25f, 1f));
+        }
+    }
+```
  
 #### Difficulty Balance
 

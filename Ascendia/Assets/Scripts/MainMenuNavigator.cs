@@ -15,13 +15,13 @@ public class MainMenuNavigator : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
        
@@ -32,10 +32,10 @@ public class MainMenuNavigator : MonoBehaviour
     {
         settingsMenu.SetActive(true);
 
-        // clear objects to ensure no issues
+       
         EventSystem.current.SetSelectedGameObject(null);
 
-        // select correct object
+        
         EventSystem.current.SetSelectedGameObject(settingsMenuFirstButton);
     }
 
@@ -44,10 +44,10 @@ public class MainMenuNavigator : MonoBehaviour
     {
         highScoreMenu.SetActive(true);
 
-        // clear objects to ensure no issues
+        
         EventSystem.current.SetSelectedGameObject(null);
 
-        // select correct object
+        
         EventSystem.current.SetSelectedGameObject(highScoreButton);
     }
 
@@ -66,11 +66,8 @@ public class MainMenuNavigator : MonoBehaviour
 
     public void CloseCurrentMenu()
     {
-
-        // clear objects to ensure no issues
         EventSystem.current.SetSelectedGameObject(null);
-
-        // select correct object
+        
         EventSystem.current.SetSelectedGameObject(menuCloseButton);
     }
 

@@ -1,5 +1,6 @@
 ## YouTube Demonstration Link
 
+- https://youtu.be/716UOJjIi_g  
 
 ## Blog Posts
 
@@ -18,4 +19,4 @@
 
 ## WebGL Playable Link
 
-https://esben-andreas-madsen.github.io/GMD1_Ascendia/  
+- https://esben-andreas-madsen.github.io/GMD1_Ascendia/  

@@ -9,7 +9,7 @@ The Game now has 3 sound effects that play whenever you:
 - Jump in-game
 - Fall to your death
 
-These are available for modification in the settings:
+These are available for modification in the settings:  
 ![image](https://github.com/Esben-Andreas-Madsen/GMD1_Ascendia/assets/91538845/9ffe5172-aa6d-41b8-8f70-893a03dc82a3)
 
 

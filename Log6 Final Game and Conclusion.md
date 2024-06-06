@@ -9,6 +9,25 @@ The Game now has 3 sound effects that play whenever you:
 - Jump in-game
 - Fall to your death
 
+The soundmanager is implemented as singleton with the intention to work across scenes:
+```
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            UnityEngine.Debug.Log("AudioManager instance created.");
+        }
+        else
+        {
+            UnityEngine.Debug.Log("Destroying duplicate AudioManager instance.");
+            Destroy(gameObject);
+        }
+
+    }
+```
+
 #### Boulder Encounters
 
 Occasionally the player will now stumble upon a boulder falling down.  

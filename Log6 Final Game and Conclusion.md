@@ -1,5 +1,29 @@
 # Log 6: Final Update
 
+## New Features
+
+#### Sound Effects
+
+The Game now has 3 sound effects that play whenever you:  
+- Select a button option
+- Jump in-game
+- Fall to your death
+
+#### Boulder Encounters
+
+Occasionally the player will now stumble upon a boulder falling down.  
+It acts as an obstacle you have to avoid, but it can only block you from progressing up.  
+It has AI movements but to make it less annoying for the player it doesn't move a lot.  
+ 
+#### Difficulty Balance
+
+You can now die more easily. The Death Zone is only the distance of rougly 5 platforms below the Player.
+
+#### Prettier Menus
+
+We did some detailing for the menus. They're now prettier and fit the theme better.  
+
+
 ## Known bugs/issues
 
 #### Jumping

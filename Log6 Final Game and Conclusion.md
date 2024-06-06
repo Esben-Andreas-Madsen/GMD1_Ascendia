@@ -89,6 +89,12 @@ It was intended that every 100th platform should cover from wall to wall in orde
 #### Jumping through platforms
 It is possible to jump through the platforms and spam the jump button and then interact with the collider to jump before actually hitting the platform with the player model's feet. This was originally something we considered a bug, but thought it felt natural to the state of the gameplay and kept it as a feature.
 
+#### Accelerating without moving
+
+You can run into a wall and build momentum by doing so.  
+It's not gamebreaking but has yet to be fixed.  
+
+
 ## Conclusion 
 
 To conclude the project we've made bulletpoints of what our game features.  

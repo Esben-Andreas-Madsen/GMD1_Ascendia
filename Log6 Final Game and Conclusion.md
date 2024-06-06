@@ -15,6 +15,9 @@ After entering the game and quitting back to the menu the settings will be locke
 
 It was intended that every 100th platform should cover from wall to wall in order to create a safety net and also signify a change in the theme layout, however these platforms will appear sometimes ~10 ish platforms earlier and will only cover 80-90% of the actual game arena.
 
+* Jumping through platforms
+  It is possible to jump through the platforms and spam the jump button and then interact with the collider to jump before actually hitting the platform with the player models feet. This was originally something we considered a bug, but thought it felt natural to the state of the gameplay and kept it as a feature.
+
 
 
 

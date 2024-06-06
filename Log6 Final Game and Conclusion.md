@@ -76,7 +76,7 @@ To conclude the project we've made bulletpoints of what our game features.
       - Platforms
       - Walls
     - Randomly Generated Level
-      - Platforms, walls, background, boulders
+      - Platforms, background, boulders
     - Boulder Encounters
       - Solid, Gravity-affected, ai-movement obstacle
     - Score Counting

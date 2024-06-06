@@ -49,7 +49,42 @@ It was intended that every 100th platform should cover from wall to wall in orde
 #### Jumping through platforms
 It is possible to jump through the platforms and spam the jump button and then interact with the collider to jump before actually hitting the platform with the player model's feet. This was originally something we considered a bug, but thought it felt natural to the state of the gameplay and kept it as a feature.
 
+## Conclusion 
 
+To conclude the project we've made bulletpoints of what our game features.  
+- Main Menu
+    - Play
+    - Instructions
+      - Image over Controls
+    - Highscores
+       - 8 Highest Scores
+    - Settings
+      - Music Toggle
+      - Music Slider
+      - Sound Effect Slider
+      - Sound Effect Toggle
+    - Quit
+
+ - Gameplay
+    - Movement
+      - Momentum Building & Regression
+    - Platforms
+    - Walls
+    - Sprites
+      - Character jump & normal
+      - Background tiles
+      - Platforms
+      - Walls
+    - Randomly Generated Level
+      - Platforms, walls, background, boulders
+    - Boulder Encounters
+      - Solid, Gravity-affected, ai-movement obstacle
+    - Score Counting
+    - Highscore Preview
+    - Death Menu
+      - Respawn
+      - Exit
+ 
 
 
 
